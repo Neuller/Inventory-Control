@@ -1,0 +1,25 @@
+unit U_Banco;
+
+interface
+
+uses
+  SysUtils, Classes, DB, DBTables;
+
+type
+  TBanco = class(TDataModule)
+    Table1: TTable;
+    DataSource1: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Banco: TBanco;
+
+implementation
+
+{$R *.dfm}
+
+end.

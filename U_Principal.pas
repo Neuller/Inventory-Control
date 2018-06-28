@@ -29,6 +29,12 @@ uses MenuInicial;
 
 procedure TFEntrada.Timer1Timer(Sender: TObject);
 begin
+FEntrada.FormStyle := fsStayOnTop;
+FEntrada.Left := 0;
+FEntrada.Top  := 0;
+FEntrada.Height := Screen.Height;
+FEntrada.Width := Screen.Width;
+begin
 Barra.Position:= Barra.Position + 1;
 
   if Barra.Position = 100 then
@@ -36,6 +42,8 @@ Barra.Position:= Barra.Position + 1;
 begin
 FEntrada.Destroy;
 Login.Show;
+end;
+
 end;
 
 end;

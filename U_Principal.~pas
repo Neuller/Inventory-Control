@@ -11,7 +11,6 @@ type
     Image1: TImage;
     Timer1: TTimer;
     Barra: TProgressBar;
-    LabelBarra: TLabel;
     procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
@@ -30,14 +29,21 @@ uses MenuInicial;
 
 procedure TFEntrada.Timer1Timer(Sender: TObject);
 begin
+FEntrada.FormStyle := fsStayOnTop;
+FEntrada.Left := 0;
+FEntrada.Top  := 0;
+FEntrada.Height := Screen.Height;
+FEntrada.Width := Screen.Width;
+begin
 Barra.Position:= Barra.Position + 1;
-LabelBarra.Caption := inttostr(Barra.Position) + '%';
 
   if Barra.Position = 100 then
 
 begin
 FEntrada.Destroy;
 Login.Show;
+end;
+
 end;
 
 end;

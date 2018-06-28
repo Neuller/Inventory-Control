@@ -1,6 +1,6 @@
 object Login: TLogin
-  Left = 389
-  Top = 321
+  Left = 360
+  Top = 344
   Width = 450
   Height = 291
   Caption = 'Login'
@@ -1651,6 +1651,7 @@ object Login: TLogin
       FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
       00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
     ParentFont = False
+    OnClick = SpeedButton1Click
   end
   object SpeedButton2: TSpeedButton
     Left = 180
@@ -1666,6 +1667,7 @@ object Login: TLogin
     Font.Name = 'Arial Narrow'
     Font.Style = []
     ParentFont = False
+    OnClick = SpeedButton2Click
   end
   object SpeedButton3: TSpeedButton
     Left = 270
@@ -1673,6 +1675,7 @@ object Login: TLogin
     Width = 60
     Height = 25
     Cursor = crHandPoint
+    Caption = 'Sair'
     Flat = True
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -1680,19 +1683,21 @@ object Login: TLogin
     Font.Name = 'Arial Narrow'
     Font.Style = []
     ParentFont = False
+    OnClick = SpeedButton3Click
   end
-  object TEdit
+  object Edit1: TEdit
     Left = 24
     Top = 64
     Width = 121
     Height = 21
     TabOrder = 0
   end
-  object TEdit
+  object Edit2: TEdit
     Left = 24
     Top = 136
     Width = 121
     Height = 21
+    PasswordChar = '*'
     TabOrder = 1
   end
 end

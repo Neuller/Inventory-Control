@@ -1,0 +1,59 @@
+unit U_Sistema;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, jpeg, ExtCtrls;
+
+type
+  TFSistema = class(TForm)
+    MainMenu1: TMainMenu;
+    Arqvuio1: TMenuItem;
+    Consulta1: TMenuItem;
+    Consultar1: TMenuItem;
+    Ajuda1: TMenuItem;
+    N1: TMenuItem;
+    Sair2: TMenuItem;
+    Image1: TImage;
+    procedure Consulta1Click(Sender: TObject);
+    procedure Consultar1Click(Sender: TObject);
+    procedure Sair2Click(Sender: TObject);
+    procedure Ajuda1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FSistema: TFSistema;
+
+implementation
+
+uses U_Ajuda, U_Adicionar, U_Consultar, U_Banco;
+
+{$R *.dfm}
+
+procedure TFSistema.Consulta1Click(Sender: TObject);
+begin
+Banco.Table1.append;
+FAdicionar.ShowModal;
+end;
+
+procedure TFSistema.Consultar1Click(Sender: TObject);
+begin
+FConsultar.ShowModal;
+end;
+
+procedure TFSistema.Sair2Click(Sender: TObject);
+begin
+FSistema.Close;
+end;
+
+procedure TFSistema.Ajuda1Click(Sender: TObject);
+begin
+FAjuda.ShowModal;
+end;
+
+end.
